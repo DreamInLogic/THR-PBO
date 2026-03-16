@@ -1,114 +1,107 @@
-# THR-PBO
-Program Java sederhana untuk memenuhi Tugas 1 Pemrograman Berorientasi Objek (PBO).
+# Sistem Pengumpulan Tugas - PBO
 
-Repository ini berisi implementasi sistem berbasis objek menggunakan bahasa Java sesuai dengan konsep yang dipelajari pada materi Bab 1–6 PBO.
+Program Java sederhana untuk memenuhi **Tugas 1 Pemrograman Berorientasi Objek (PBO)**.
 
-## 📚 Deskripsi Proyek
+Program ini mensimulasikan sistem pengumpulan tugas praktikum antara **dosen dan mahasiswa**.
 
-Program ini dibuat untuk mengimplementasikan konsep dasar Pemrograman Berorientasi Objek (PBO) seperti:
+---
+
+## Deskripsi Sistem
+
+Sistem ini memungkinkan:
+
+- Dosen menambahkan tugas
+- Mahasiswa mengumpulkan tugas
+- Sistem menentukan apakah tugas **tepat waktu atau terlambat**
+- Melihat daftar pengumpulan tugas
+
+Program dijalankan melalui **menu interaktif di terminal**.
+
+---
+
+## Konsep PBO yang Digunakan
+
+Program ini mengimplementasikan beberapa konsep dasar PBO:
 
 - Class dan Object
+- Inheritance
+- Enkapsulasi
 - Method
 - Percabangan (if / switch)
 - Perulangan (looping)
 - Input dari pengguna
-- Penggunaan Array / ArrayList
+- Array untuk penyimpanan data
 
-Program ini mensimulasikan sebuah sistem sederhana yang memungkinkan pengguna untuk mengelola data melalui menu interaktif di terminal.
+---
 
-## 🧩 Konsep PBO yang Digunakan
-
-Beberapa konsep PBO yang diterapkan dalam program ini:
-
-### 1. Class dan Object
-Program dibangun menggunakan beberapa class yang merepresentasikan komponen dalam sistem.
-
-Contoh:
-- Class utama untuk menjalankan program
-- Class data untuk menyimpan informasi
-- Class untuk mengelola proses dalam sistem
-
-### 2. Method
-Setiap class memiliki method yang digunakan untuk menjalankan fungsi tertentu seperti:
-
-- menambahkan data
-- menampilkan data
-- memproses input pengguna
-
-### 3. Enkapsulasi
-Data dalam class disimpan sebagai atribut dan diakses melalui method agar lebih terstruktur dan aman.
-
-## ⚙️ Fitur Program
-
-Program memiliki beberapa fitur utama:
-
-- Menambahkan data
-- Menampilkan data
-- Mengubah status data
-- Menu interaktif berbasis terminal
-
-Program juga menggunakan:
-
-- Percabangan (switch / if)
-- Perulangan (loop)
-- ArrayList untuk penyimpanan data
-
-## 🗂 Struktur Project
+## Struktur Class
 
 
-THR-PBO
-│
-├── Main.java
-├── ClassData.java
-├── ClassManager.java
-└── README.md
+User
+├── Mahasiswa
+└── Dosen
+
+Tugas
+Pengumpulan
+SistemPengumpulan
+Main
 
 
-Keterangan:
+Penjelasan:
 
-Main.java → menjalankan program utama  
-ClassData.java → menyimpan atribut dan data objek  
-ClassManager.java → mengelola proses dalam sistem  
+- **User** → class dasar pengguna
+- **Mahasiswa** → turunan dari User
+- **Dosen** → turunan dari User
+- **Tugas** → menyimpan data tugas
+- **Pengumpulan** → menyimpan data pengumpulan tugas
+- **SistemPengumpulan** → mengelola seluruh sistem
+- **Main** → menjalankan program
 
-## ▶️ Cara Menjalankan Program
+---
 
-1. Clone repository ini
+## Fitur Program
+
+- Login sebagai Dosen
+- Login sebagai Mahasiswa
+- Menambahkan tugas
+- Mengumpulkan tugas
+- Melihat daftar pengumpulan
+- Menampilkan status pengumpulan (Tepat waktu / Terlambat)
+
+---
+
+## Cara Menjalankan Program
+
+Clone repository:
+
+
 git clone https://github.com/DreamInLogic/THR-PBO.git
 
-2. Masuk ke folder project
-cd THR-PBO
 
-3. Compile program
-javac Main.java
+Masuk ke folder project:
 
-4. Jalankan program
+
+cd THR-PBO/src
+
+
+Compile program:
+
+
+javac *.java
+
+
+Jalankan program:
+
+
 java Main
 
-## 🖥 Contoh Output Program
-Program akan menampilkan menu seperti berikut:
 
-===== MENU PROGRAM =====
-Tambah Data
-Tampilkan Data
-Ubah Status
-Keluar
-Pilih menu:
+---
 
+## Author
 
-Pengguna dapat memilih menu sesuai kebutuhan.
-
-## 🎯 Tujuan Pembuatan Program
-
-Tujuan dari pembuatan program ini adalah:
-
-- memahami konsep dasar Pemrograman Berorientasi Objek
-- memodelkan sistem ke dalam class
-- mengimplementasikan class tersebut dalam bahasa Java
-
-## 👨‍💻 Author
-
-Nama : Sunu Setyo Jati
-NIM : 250215030
-Mata Kuliah : Pemrograman Berorientasi Objek  
-Program Studi : TRPL 
-Kelas : 1A
+Nama : **Sunu Setyo Jati**  
+NIM : **250215030**  
+Mata Kuliah : **Pemrograman Berorientasi Objek**  
+Program Studi : **TRPL**  
+Kelas : **1A**
