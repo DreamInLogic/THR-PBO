@@ -1,18 +1,168 @@
-## Getting Started
+Sistem Pengumpulan Tugas - PBO (Dengan Database)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Program Java berbasis database untuk memenuhi Tugas Pemrograman Berorientasi Objek (PBO).
 
-## Folder Structure
+Program ini merupakan pengembangan dari versi tanpa database, dengan menambahkan penyimpanan data menggunakan database.
 
-The workspace contains two folders by default, where:
+Deskripsi Sistem
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Sistem ini mensimulasikan proses pengumpulan tugas antara dosen dan mahasiswa dengan penyimpanan data secara permanen menggunakan database.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Sistem memungkinkan:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+Dosen mengelola tugas (CRUD)
 
-## Dependency Management
+Mahasiswa mengumpulkan tugas
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Sistem menentukan status pengumpulan (tepat waktu / terlambat)
+
+Menampilkan data pengumpulan dan statistik
+
+Program dijalankan melalui menu interaktif di terminal.
+
+Teknologi yang Digunakan
+
+Java
+
+JDBC
+
+MySQL
+
+Konsep PBO yang Digunakan
+
+Program ini mengimplementasikan konsep:
+
+Class dan Object
+
+Inheritance
+
+Enkapsulasi
+
+Method
+
+Relasi antar class
+
+Input user (Scanner)
+
+Exception Handling
+
+Database Connection (JDBC)
+
+Struktur Class
+User
+├── Mahasiswa
+└── Dosen
+
+Tugas
+Pengumpulan
+SistemPengumpulan
+DatabaseConnection
+Main
+Struktur Database
+
+Database: pbo_tugas
+
+Tabel:
+
+tugas
+
+mahasiswa
+
+pengumpulan
+
+Relasi:
+
+pengumpulan → tugas (Foreign Key)
+
+pengumpulan → mahasiswa (Foreign Key)
+
+Fitur Program
+👨‍🏫 Dosen
+
+Tambah tugas
+
+Lihat daftar tugas
+
+Edit tugas
+
+Hapus tugas
+
+Lihat pengumpulan
+
+Statistik pengumpulan
+
+Reset database
+
+👨‍🎓 Mahasiswa
+
+Input NIM dan nama
+
+Lihat tugas yang belum dikumpulkan
+
+Kumpulkan tugas
+
+Validasi tidak bisa submit dua kali
+
+Status otomatis (Tepat Waktu / Terlambat)
+
+Setup Database
+1. Buat Database
+CREATE DATABASE pbo_tugas;
+2. Import Database
+
+Gunakan phpMyAdmin:
+
+Buka phpMyAdmin
+
+Pilih database pbo_tugas
+
+Klik menu Import
+
+Upload file:
+
+database/pbo_tugas.sql
+Konfigurasi Koneksi
+
+Pastikan file DatabaseConnection.java sesuai:
+
+String url = "jdbc:mysql://localhost:3306/pbo_tugas";
+String user = "root";
+String password = "";
+Cara Menjalankan Program
+Compile:
+javac -cp "lib/*" -d bin src/*.java
+Run:
+java -cp "bin;lib/*" Main
+Login
+Dosen
+Username : dosen
+Password : 123
+Mahasiswa
+
+Input bebas (NIM & Nama)
+
+Keunggulan Versi Database
+
+Data tersimpan permanen
+
+Tidak hilang saat program ditutup
+
+Mendukung relasi antar data
+
+Lebih mendekati sistem nyata
+
+Struktur Folder
+dengan-db/
+├── src/
+├── bin/
+├── lib/
+├── database/
+│   └── pbo_tugas.sql
+└── README.md
+Author
+
+Nama : Sunu Setyo Jati
+NIM : 250215030
+Mata Kuliah : Pemrograman Berorientasi Objek
+Program Studi : TRPL
+Kelas : 1A

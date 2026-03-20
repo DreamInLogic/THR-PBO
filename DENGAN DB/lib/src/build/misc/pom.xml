@@ -20,12 +20,12 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+ <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.mysql</groupId>
-  <artifactId>@MYSQL_CJ_EXTENDED_PROD_NAME@</artifactId>
-  <version>@MYSQL_CJ_VERSION@</version>
-  <packaging>jar</packaging>
+<groupId>mysql</groupId>
+<artifactId>mysql-connector-j</artifactId>
+<version>9.6.0</version>
+<packaging>jar</packaging>
 
   <name>MySQL Connector/J</name>
   <description>JDBC Type 4 driver for MySQL.</description>
