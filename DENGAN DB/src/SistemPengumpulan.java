@@ -1,4 +1,7 @@
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class SistemPengumpulan {
@@ -10,15 +13,37 @@ public class SistemPengumpulan {
         while (true) {
 
             System.out.println("\n=== MENU DOSEN ===");
+            System.out.println("1. Kelola Tugas");
+            System.out.println("2. Kelola Pengumpulan");
+            System.out.println("3. Reset Data (Hanya Darurat)");
+            System.out.println("4. Kembali");
+            System.out.print("Pilih: ");
+
+            int pilih = input.nextInt();
+            input.nextLine();
+
+            switch (pilih) {
+
+                case 1 -> menuTugas();
+                case 2 -> menuPengumpulan();
+                case 3 -> resetDatabase();
+                case 4 -> { return; }
+
+                default -> System.out.println("Menu tidak tersedia");
+            }
+        }
+    }
+
+    public void menuTugas() {
+
+        while (true) {
+
+            System.out.println("\n=== KELOLA TUGAS ===");
             System.out.println("1. Tambah Tugas");
             System.out.println("2. Lihat Tugas");
             System.out.println("3. Edit Tugas");
             System.out.println("4. Hapus Tugas");
-            System.out.println("5. Lihat Pengumpulan"); 
-            System.out.println("6. Statistik");         
-            System.out.println("7. Hapus Pengumpulan");
-            System.out.println("8. Reset Data (Hanya Darurat)");
-            System.out.println("9. Kembali");
+            System.out.println("5. Kembali");
             System.out.print("Pilih: ");
 
             int pilih = input.nextInt();
@@ -30,12 +55,35 @@ public class SistemPengumpulan {
                 case 2 -> lihatTugasDB();
                 case 3 -> editTugasDB();
                 case 4 -> hapusTugasDB();
-                case 5 -> lihatPengumpulanDB(); 
-                case 6 -> statistikDB();        
-                case 7 -> hapusPengumpulanDB();
-                case 8 -> resetDatabase();
-                case 9 -> { return; }
+                case 5 -> { return; }
 
+                default -> System.out.println("Menu tidak tersedia");
+            }
+        }
+    }
+
+    public void menuPengumpulan() {
+
+        while (true) {
+
+            System.out.println("\n=== KELOLA PENGUMPULAN ===");
+            System.out.println("1. Lihat Pengumpulan");
+            System.out.println("2. Hapus Pengumpulan");
+            System.out.println("3. Statistik");
+            System.out.println("4. Kembali");
+            System.out.print("Pilih: ");
+
+            int pilih = input.nextInt();
+            input.nextLine();
+
+            switch (pilih) {
+
+                case 1 -> lihatPengumpulanDB();
+                case 2 -> hapusPengumpulanDB();
+                case 3 -> statistikDB();
+                case 4 -> { return; }
+
+                default -> System.out.println("Menu tidak tersedia");
             }
         }
     }
